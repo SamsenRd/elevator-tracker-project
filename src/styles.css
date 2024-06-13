@@ -1,0 +1,100 @@
+.mapHeader{
+    margin-top: 2em;
+  }
+
+  .mapHeader > h2{
+    font-size: 3rem;
+  }
+
+  hr{
+    width: 20%;
+    margin: 1em auto;
+    border: 3px solid #023E8A ;
+  }
+  
+.mapLegend{
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin: 2em 0 0.5em 0;
+}
+
+.content{
+  position: relative;
+}
+  
+  .centered-y {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    /* left: 50%;
+    right: 50%; */
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  .distribution-map {
+    position: relative;
+    width: 100%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  .distribution-map > img {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .map-point {
+    cursor: pointer;
+    outline: none;
+    z-index: 0;
+    position: absolute;
+    width: 20px; /* $map-dot-size */
+    height: 20px; /* $map-dot-size */
+    border-radius: 20px; /* $map-dot-size / 2 */
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+    background: rgba(26, 26, 26, 0.85); /* transparentize($color-background, 0.15) */
+    border: 5px solid #FF6D00; /* $map-dot-size/8 solid $color-highlight-dark */
+  }
+  
+  .map-point .content {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: overlay;
+  }
+  
+  .map-point:active,
+  .map-point:focus {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    width: 300px;
+    height: 220px;
+    color: rgb(229, 229, 229);
+    z-index: 1;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+  }
+  
+  .map-point:active .content,
+  .map-point:focus .content {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out 0.25s, height 0 ease-in-out 0.25s, overflow 0 ease-in-out 0.25s;
+    overflow: hidden;
+  }
+  
+  .map-point:active .content a:hover,
+  .map-point:active .content a:active,
+  .map-point:focus .content a:hover,
+  .map-point:focus .content a:active {
+    color: rgb(197, 235, 255); /* lighten($color-highlight, 10%) */
+  }
