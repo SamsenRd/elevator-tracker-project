@@ -24,7 +24,7 @@
     <link href="/Bootstrap_Files/css/styles.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link href="/src/styles.css" rel="stylesheet"/>
+    <link href="/src/css/styles.css" rel="stylesheet"/>
 
 </head>
 
@@ -58,17 +58,7 @@
         </div>
     </header>
     <!-- Map -->
-    <div className="mapHeader">
-        <h2>Real-time Elevator Updates</h2>
-        <div className="mapLegend">
-            <p>O --- Out of service</p>
-            <p>O --- In service</p>
-        </div>
-        <p><i>Last updated:</i></p>
-    </div>
-    <div className="distribution-map">
-        <img src="images/TTC_Subway_Map.png" alt="TTC Subway and Streetcar Map" />
-    </div>
+    <div id="map"></div>
     <!-- <div id="root"></div> -->
     <!-- Footer-->
     <footer class="footer bg-light">
@@ -115,6 +105,7 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="/src/js/script.js"></script>
 
 </body>
 

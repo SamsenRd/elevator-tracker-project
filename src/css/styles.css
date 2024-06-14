@@ -1,0 +1,67 @@
+.mapHeader{
+    margin-top: 2em;
+  }
+
+  .mapHeader > h2{
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+.mapLegend{
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin: 2em 0 0.5em 0;
+}
+
+.content{
+  position: relative;
+}
+  
+  .centered-y {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    /* left: 50%;
+    right: 50%; */
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .timeStamp{
+    text-align: center;
+  }
+
+  .distribution-map {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  .distribution-map > img {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .point{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .popup{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  
